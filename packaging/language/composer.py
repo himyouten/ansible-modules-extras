@@ -220,7 +220,7 @@ def main():
 
     if rc != 0:
         output = parse_out(err)
-        module.fail_json(msg=output, stderr=err)
+        module.fail_json(msg=output, stdout=err)
     else:
         # Composer version > 1.0.0-alpha9 now use stderr for standard notification messages
         output = parse_out(out + err)
